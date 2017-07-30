@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'GoBold';
+  src: url(../fonts/Gobold.otf);
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: GoBold, Helvetica, sans-serif;
+  text-align: center;
+  color: #333;
+  font-size: 1.6em;
+}
+
+h2 {
+  font-family: GoBold, Helvetica, sans-serif;
+  text-align: center;
+  color: #333;
+  margin-top: 2em;
+  font-size: 1.4em;
+}
+
+ul {
+  padding-left: 2em;
+}
+
+p, li {
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-family: OpenSans, Helvetica, sans-serif;
+  text-align: justify;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dashed #242C46;
+  color: #242C46;
+}
+a:hover {
+  color: #6778b1;
+  border-bottom: 1px dashed #6778b1;
+}
+
+header {
+  height: 65px;
+  border-bottom: 2px solid #242c46;
+}
+header .logo {
+  display: inline-block;
+  float: left;
+  margin: 0 0 0 4%;
+}
+header .language {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin: 0 4% 0 0;
+  background: #242c46;
+}
+header .language a.language__select {
+  display: inline-block;
+  float: left;
+  width: 44px;
+  height: 44px;
+  font: 400 20px/44px OpenSans, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: none;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 0;
+}
+header .language a.language__select:hover {
+  color: #6778b1;
+  border-bottom: 0;
+}
+header .language a.language__select--en {
+  border-right: 1px solid #fff;
+}
+
+section {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+}
+section h1 {
+  text-align: left;
+  margin-left: 4%;
+}
+section section {
+  margin: 0;
+  padding: 2% 4%;
+  border: none;
+  overflow: auto;
+}
+section section .ui-popup {
+  padding: 2%;
+  text-align: justify;
+}
+section section .ui-popup > img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+section section .ui-popup h2 {
+  text-align: center;
+}
+section section img {
+  float: left;
+  clear: left;
+  width: 40%;
+  border: 1px solid #ccc;
+}
+section section h2 {
+  float: left;
+  margin: 0 0 0 4%;
+  width: 56%;
+  text-align: left;
+}
