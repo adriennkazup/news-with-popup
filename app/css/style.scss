@@ -8,24 +8,32 @@
   src: url(../fonts/OpenSans-Regular.ttf);
 }
 
+$body-font: OpenSans, Helvetica, sans-serif;
+$title-font: GoBold, Helvetica, sans-serif;
+$text-color: #324158;
+
 html, body {
   margin: 0;
   padding: 0;
+  color: $text-color;
+}
+
+%title {
+  font-family: $title-font;
+  text-align: center;
+  color: $text-color;
 }
 
 h1 {
-  font-family: GoBold, Helvetica, sans-serif;
-  text-align: center;
-  color: #333;
+  @extend %title;
   font-size: 1.6em;
 }
  
 h2 {
-  font-family: GoBold, Helvetica, sans-serif;
-  text-align: center;
-  color: #333;
+  @extend %title;
   margin-top: 2em;
   font-size: 1.4em;
+  line-height: 1.6em;
 }
  
 ul {
@@ -33,22 +41,12 @@ ul {
 }
  
 p, li {
-  margin-bottom: 1em;
+  margin-bottom: 1.3em;
   font-size:1em;
-  font-family: OpenSans, Helvetica, sans-serif;
+  font-family: $body-font;
   text-align: justify;
-  line-height: 1.5em;
-  letter-spacing: 0.05em;
-}
-  
-a {
-  text-decoration: none;
-  border-bottom: 1px dashed #242C46;
-  color: #242C46;
-  &:hover {
-    color: #6778b1;
-    border-bottom: 1px dashed #6778b1;
-  }
+  line-height: 1.3em;
+  letter-spacing: 0.02em;
 }
 
 header {
@@ -73,7 +71,7 @@ header {
       float: left;
       width: 44px;
       height: 44px;
-      font: 400 20px/44px OpenSans, Helvetica, sans-serif;
+      font: 400 20px/44px $body-font;
       text-align: center;
       text-shadow: none;
       color: #fff;
@@ -105,38 +103,76 @@ section {
     padding: 2% 4%;
     border: none;
     overflow: auto;
+  }
     
-    .ui-popup {
-      padding: 2%;
-      text-align: justify;
-      
-      &>img {
-        width: 100%;
-        margin-bottom: 1em;
-      }
-      
-      h2 {
-        text-align: center;
-      } 
+  img {
+    float: left;
+    clear: left;
+    width: 40%;
+    border: 1px solid #ccc;
+  }
+    
+  h2 {
+    float: left;
+    margin: 0 0 0 4%;
+    width: 56%;
+    text-align: left;
+  }
+}
+
+.ui-popup-container {
+    
+  .ui-popup {
+    padding: 2%;
+    text-align: justify;
+    color: $text-color;
+    text-shadow: none;
+    
+    &>h2 {
+      margin: 1em 0;
+      text-align: left;
+    }
+    
+    &>p {
+      margin: 0 0 1.3em 0;
     }
     
     img {
-      float: left;
-      clear: left;
-      width: 40%;
-      border: 1px solid #ccc;
+      width: 100%;
     }
     
-    h2 {
-      float: left;
-      margin: 0 0 0 4%;
-      width: 56%;
-      text-align: left;
+    a {
+      font-weight: 400;
+      text-decoration: none;
+      border-bottom: 1px dashed #242C46;
+      color: #242C46;
+      &:hover {
+        color: #6778b1;
+        border-bottom: 1px dashed #6778b1;
+      }
+      &:visited {
+        color: #eee;
+      }
+    }
+    
+    &>.ui-btn-right {
+      display: block;
+      width: 40px;
+      height: 40px;
+      top: 4px;
+      right: 4px;
+      font-size: 0;
+      background: url(../img/close-button.png) 0 0 no-repeat;
+      background-size: cover;
+      z-index: 10;
     }
   }
 }
 
-
+.ui-popup-screen.in {
+  opacity: 0.8;
+  background: #000;
+}
 
   
  

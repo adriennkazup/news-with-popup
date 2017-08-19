@@ -9,21 +9,23 @@
 html, body {
   margin: 0;
   padding: 0;
+  color: #324158;
+}
+
+h1, h2 {
+  font-family: GoBold, Helvetica, sans-serif;
+  text-align: center;
+  color: #324158;
 }
 
 h1 {
-  font-family: GoBold, Helvetica, sans-serif;
-  text-align: center;
-  color: #333;
   font-size: 1.6em;
 }
 
 h2 {
-  font-family: GoBold, Helvetica, sans-serif;
-  text-align: center;
-  color: #333;
   margin-top: 2em;
   font-size: 1.4em;
+  line-height: 1.6em;
 }
 
 ul {
@@ -31,22 +33,12 @@ ul {
 }
 
 p, li {
-  margin-bottom: 1em;
+  margin-bottom: 1.3em;
   font-size: 1em;
   font-family: OpenSans, Helvetica, sans-serif;
   text-align: justify;
-  line-height: 1.5em;
-  letter-spacing: 0.05em;
-}
-
-a {
-  text-decoration: none;
-  border-bottom: 1px dashed #242C46;
-  color: #242C46;
-}
-a:hover {
-  color: #6778b1;
-  border-bottom: 1px dashed #6778b1;
+  line-height: 1.3em;
+  letter-spacing: 0.02em;
 }
 
 header {
@@ -99,26 +91,61 @@ section section {
   border: none;
   overflow: auto;
 }
-section section .ui-popup {
-  padding: 2%;
-  text-align: justify;
-}
-section section .ui-popup > img {
-  width: 100%;
-  margin-bottom: 1em;
-}
-section section .ui-popup h2 {
-  text-align: center;
-}
-section section img {
+section img {
   float: left;
   clear: left;
   width: 40%;
   border: 1px solid #ccc;
 }
-section section h2 {
+section h2 {
   float: left;
   margin: 0 0 0 4%;
   width: 56%;
   text-align: left;
+}
+
+.ui-popup-container .ui-popup {
+  padding: 2%;
+  text-align: justify;
+  color: #324158;
+  text-shadow: none;
+}
+.ui-popup-container .ui-popup > h2 {
+  margin: 1em 0;
+  text-align: left;
+}
+.ui-popup-container .ui-popup > p {
+  margin: 0 0 1.3em 0;
+}
+.ui-popup-container .ui-popup img {
+  width: 100%;
+}
+.ui-popup-container .ui-popup a {
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px dashed #242C46;
+  color: #242C46;
+}
+.ui-popup-container .ui-popup a:hover {
+  color: #6778b1;
+  border-bottom: 1px dashed #6778b1;
+}
+.ui-popup-container .ui-popup a:visited {
+  color: #eee;
+}
+.ui-popup-container .ui-popup > .ui-btn-right {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 4px;
+  right: 4px;
+  font-size: 0;
+  background: url(../img/close-button.png) 0 0 no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.ui-popup-screen.in {
+  opacity: 0.8;
+  background: #000;
 }
